@@ -58,21 +58,21 @@ class Shoe:
 
 # test
 
-shoe = Shoe(6)
-print(shoe.cards_left())        # 312
-print(shoe.decks_left())        # 6.0
-print(shoe.cut_position)        # somewhere between 209 and 258 (67%-83%)
-
-print(shoe.deal_out())          # e.g. K of Spades
-print(shoe.cards_left())        # 311
-
-while not shoe.needs_shuffle():
-    shoe.deal_out()
-print(shoe.cards_left())        # cards left behind the cut card
-
-while shoe.cards_left() > 0:
-    shoe.deal_out()
-print(shoe.deal_out())          # None (empty shoe doesn't crash)
-
-shoe.shuffle()
-print(shoe.cards_left())        # 312 again
+# shoe = Shoe(6)
+# print(shoe.cards_left())        # 312
+# print(shoe.decks_left())        # 6.0
+# print(shoe.cut_position)        # somewhere between 209 and 258 (67%-83%)
+#
+# print(shoe.deal_out())          # e.g. K of Spades
+# print(shoe.cards_left())        # 311
+#
+# while not shoe.needs_shuffle():
+#     shoe.deal_out()
+# print(shoe.cards_left())        # cards left behind the cut card
+#
+# while shoe.cards_left() > 0:
+#     shoe.deal_out()
+# print(shoe.deal_out())          # None (empty shoe doesn't crash)
+#
+# shoe.shuffle()
+# print(shoe.cards_left())        # 312 again
