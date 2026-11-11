@@ -22,10 +22,10 @@ class Card:
             raise ValueError(f"Invalid suit: {suit}")
         self.suit = suit
 
-    def getValue(self):
+    def get_value(self):
         return RANK_VALUES[self.rank]
 
-    def getSuit(self):
+    def get_suit(self):
         return self.suit
 
     # checks if A is important for counting logic
