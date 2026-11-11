@@ -28,6 +28,7 @@ class Card:
     def getSuit(self):
         return self.suit
 
+    # checks if A is important for counting logic
     def is_ace(self):
         return self.rank == "A"
     
