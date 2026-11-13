@@ -31,3 +31,6 @@ SETTLED = "settled"
 WINS = "wins"
 LOSSES = "losses"
 PUSHES = "pushes"
+
+# Dealer
+DEALER_STANDS_ON = 17   # dealer hits on 16 or less

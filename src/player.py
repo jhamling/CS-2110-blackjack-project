@@ -42,14 +42,14 @@ class Player:
 
 # test
 
-p = Player("Alice", 100)
-print(p.place_bet(150))         # False (more than bankroll)
-print(p.place_bet(25))          # True
-print(p.bankroll)               # 75
-p.record_result(WINS, 50)       # bet 25 back + 25 winnings
-p.end_round()
-print(p.bankroll)               # 125
-print(p.results)                # {'wins': 1, 'losses': 0, 'pushes': 0}
-print(p.bankroll_history)       # [100, 125]
-print(p.hands)                  # []
-print(p.is_broke())             # False
+# p = Player("Alice", 100)
+# print(p.place_bet(150))         # False (more than bankroll)
+# print(p.place_bet(25))          # True
+# print(p.bankroll)               # 75
+# p.record_result(WINS, 50)       # bet 25 back + 25 winnings
+# p.end_round()
+# print(p.bankroll)               # 125
+# print(p.results)                # {'wins': 1, 'losses': 0, 'pushes': 0}
+# print(p.bankroll_history)       # [100, 125]
+# print(p.hands)                  # []
+# print(p.is_broke())             # False
