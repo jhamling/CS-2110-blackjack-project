@@ -8,6 +8,7 @@ class Hand:
         self.bet = bet
         self.is_split = is_split    # split hands can't be a natural blackjack
         self.status = PLAYING
+        self.outcome = None         # WINS / LOSSES / PUSHES / BLACKJACK once settled
 
     def add_card(self, card):
         self.cards.append(card)
@@ -15,6 +16,8 @@ class Hand:
             self.status = BUST
         elif self.is_blackjack():
             self.status = BLACKJACK
+        elif self.get_value() == 21:
+            self.status = STOOD     # auto-stand at 21
 
     def _value_and_soft(self):
         # Count every ace as 11, then drop aces to 1 one at a time while busting
@@ -54,8 +57,9 @@ class Hand:
         if self.status == PLAYING:
             self.status = STOOD
 
-    def settle(self):
+    def settle(self, outcome=None):
         self.status = SETTLED
+        self.outcome = outcome
 
     def __str__(self):
         return ", ".join(str(card) for card in self.cards) + f" ({self.get_value()})"

@@ -5,10 +5,11 @@ from hand import Hand
 
 class Player:
 
-    def __init__(self, name, bankroll):
+    def __init__(self, name, bankroll, is_bot=False):
         if bankroll < 0:
             raise ValueError(f"Bankroll can't be negative, got {bankroll}")
         self.name = name
+        self.is_bot = is_bot
         self.bankroll = bankroll
         self.hands = []                                       # Hand objects for the current round
         self.results = {WINS: 0, LOSSES: 0, PUSHES: 0}
@@ -35,7 +36,7 @@ class Player:
         # Pays out one hand against the dealer and records the result; returns the outcome
         outcome = get_outcome(hand, dealer_hand)
         self.record_result(WINS if outcome == BLACKJACK else outcome, payout(hand.bet, outcome))
-        hand.settle()
+        hand.settle(outcome)
         return outcome
 
     def record_result(self, outcome, amount=0):

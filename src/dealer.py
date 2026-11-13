@@ -38,20 +38,21 @@ class Dealer:
 
 # test
 
-from shoe import Shoe
+if __name__ == "__main__":
+    from shoe import Shoe
 
-shoe = Shoe(6)
-dealer = Dealer()
-dealer.take_card(shoe)
-dealer.take_card(shoe)
-print(dealer)                   # e.g. K of Spades, [hidden]
-print(dealer.get_up_card())     # K of Spades
+    shoe = Shoe(6)
+    dealer = Dealer()
+    dealer.take_card(shoe)
+    dealer.take_card(shoe)
+    print(dealer)                   # e.g. K of Spades, [hidden]
+    print(dealer.get_up_card())     # K of Spades
 
-dealer.reveal_hole_card()
-print(dealer)                   # e.g. K of Spades, 5 of Hearts (15)
-while dealer.should_hit():
-    print("Dealer hits:", dealer.take_card(shoe))   # one card per step
-print(dealer)                   # final hand, 17 or more (or bust)
+    dealer.reveal_hole_card()
+    print(dealer)                   # e.g. K of Spades, 5 of Hearts (15)
+    while dealer.should_hit():
+        print("Dealer hits:", dealer.take_card(shoe))   # one card per step
+    print(dealer)                   # final hand, 17 or more (or bust)
 
-dealer.clear_hand()
-print(dealer.hand.cards)        # []
+    dealer.clear_hand()
+    print(dealer.hand.cards)        # []
