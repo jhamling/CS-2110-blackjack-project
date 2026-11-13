@@ -39,3 +39,6 @@ DEALER_STANDS_ON = 17   # dealer hits on 16 or less
 MIN_BET = 10
 MAX_BET = 500
 BLACKJACK_PAYOUT = 1.5   # 3:2
+
+# Bots
+BOT_STANDS_ON = 17   # simple bot strategy: hit below 17
