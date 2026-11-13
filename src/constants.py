@@ -34,3 +34,8 @@ PUSHES = "pushes"
 
 # Dealer
 DEALER_STANDS_ON = 17   # dealer hits on 16 or less
+
+# Betting
+MIN_BET = 10
+MAX_BET = 500
+BLACKJACK_PAYOUT = 1.5   # 3:2
