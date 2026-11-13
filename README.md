@@ -26,6 +26,7 @@ Makes sure you always check to see what branch you are in
 | `git checkout -b name` | Create a branch and move to it |
 | `git switch main` | Go back to main |
 | `git branch` | To see current branches |
+| `git branch name` | Switch to desired branch |
 
 
 ## Merge conflicts
