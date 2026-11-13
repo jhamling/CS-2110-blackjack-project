@@ -1,8 +1,4 @@
-PLAYING = "playing"
-STOOD = "stood"
-BUST = "bust"
-BLACKJACK = "blackjack"
-SETTLED = "settled"
+from constants import PLAYING, STOOD, BUST, BLACKJACK, SETTLED
 
 
 class Hand:
@@ -22,7 +18,7 @@ class Hand:
 
     def _value_and_soft(self):
         # Count every ace as 11, then drop aces to 1 one at a time while busting
-        total = sum(card.getValue() for card in self.cards)
+        total = sum(card.get_value() for card in self.cards)
         soft_aces = sum(1 for card in self.cards if card.is_ace())
         while total > 21 and soft_aces > 0:
             total -= 10
