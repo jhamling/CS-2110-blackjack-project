@@ -1,11 +1,5 @@
-RANK_VALUES = {
-    "2": 2, "3": 3, "4": 4, "5": 5,
-    "6": 6, "7": 7, "8": 8, "9": 9,
-    "10": 10, "J": 10, "Q": 10, "K": 10,
-    "A": 11
-}
+from constants import RANK_VALUES, SUITS
 
-SUITS = ("Diamonds", "Hearts", "Spades", "Clubs")
 
 class Card:
 
@@ -43,5 +37,5 @@ class Card:
 # card1 = Card("K", "Spades")
 # card2 = Card("9", "Hearts")
 #
-# print(card1.getValue())
-# print(card1.getValue() > card2.getValue())
+# print(card1.get_value())
+# print(card1.get_value() > card2.get_value())

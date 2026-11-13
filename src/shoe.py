@@ -1,15 +1,7 @@
 import random
 
-from card import Card, RANK_VALUES, SUITS
-
-CARDS_PER_DECK = 52
-# Deck penetration (fraction dealt before reshuffle), by number of decks
-PENETRATION_RANGES = {
-    1: (0.50, 0.70),   # single deck
-    2: (0.50, 0.75),   # double deck
-    6: (0.67, 0.83),   # 6-deck shoe
-    8: (0.69, 0.81),   # 8-deck shoe
-}
+from card import Card
+from constants import RANK_VALUES, SUITS, CARDS_PER_DECK, PENETRATION_RANGES
 
 
 def penetration_range(num_decks):
